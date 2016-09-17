@@ -1,0 +1,40 @@
+% Copy this template to create a new invoice.
+%
+\documentclass[SN,11pt,enlargefirstpage=true,sps]{scrlttr2}
+\usepackage{rechnung}
+
+% Specify the invoice date (day, month, year)
+\newdate{invoicedate}{24}{12}{2000}
+
+% If you create multiple invoices on a single day,
+% increase this counter for each invoice.
+\setkomavar{invoicenr}{1}
+
+% Set your signature here
+\setkomavar{signature}{Your Name, SPSA Function}
+
+\begin{document}
+
+\begin{letter}{Max Muster\\Musterstrasse 42\\8640 Rapperswil}
+
+  \opening{Dear Person,}
+
+  This is an invoice for the following items:
+
+  \begin{invoice}{0.0}% No VAT?
+    % Add your items here (description, price, count)
+		\Fee{Work per hour}{60}{1.75}
+		\Fee{Silver Sponsoring}{500}{1}
+  \end{invoice}
+
+  Payment terms: 30 days.
+
+	You can write more stuff here. Like lorem ipsum dolor etc. Which is not
+	actually Latin, by the way! It just looks like it is, but it is not. But at
+	least it fills the necessary space!
+
+  \closing{\\Best regards,}
+
+\end{letter}
+
+\end{document}

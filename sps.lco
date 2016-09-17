@@ -1,0 +1,59 @@
+\ProvidesFile{sps.lco}[2015/11/09 v1.0 SPSA scrlttr2 style]
+
+% Imports
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenx}
+\usepackage{datetime}
+
+% New KOMA variables
+\newkomavar{invoicenr}
+\newkomavar{fromiban}
+\newkomavar{bankseparator}
+
+% Personal data
+\setkomavar{fromname}{Swiss Python Summit Association}
+\setkomavar{fromaddress}{8000 Zürich}
+\setkomavar{fromemail}{info@python-summit.ch}
+\setkomavar{fromurl}{http://www.python-summit.ch/}
+\setkomavar{place}{Zürich}
+\setkomavar{signature}{Swiss Python Summit Association}
+\setkomavar{subject}{Invoice %
+	\getdateyear{invoicedate}%
+	\twodigit{\getdatemonth{invoicedate}}%
+	\twodigit{\getdateday{invoicedate}}%
+	-\usekomavar{invoicenr}}
+\setkomavar{date}{\displaydate{invoicedate}}
+\setkomavar{frombank}{Postfinance, 8000 Zürich}
+\setkomavar{fromiban}{IBAN CH12 3456 7890 1234 5678 9}
+\setkomavar{bankseparator}{\quad\textbar\quad}
+
+% Font
+\usepackage[sfdefault,light]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage{mathastext}
+
+% Layout
+\usepackage{parskip}
+
+% Header
+\setkomavar{firsthead}{%
+	\centering
+	{\Large \usekomavar{fromname}}\\
+	{\small \def\\{, }\usekomavar{fromaddress}}\\
+	{\small \usekomavar{fromurl}}%
+}
+
+% Left aligned signature
+\renewcommand*{\raggedsignature}{\raggedright}
+
+% Less spacing between closing and name
+\@setplength{sigbeforevskip}{1em}
+
+% Footer
+\setkomavar{firstfoot}{%
+	\centering
+	\footnotesize
+	\usekomavar{frombank}\usekomavar{bankseparator}\usekomavar{fromiban}
+}
+
+\endinput
