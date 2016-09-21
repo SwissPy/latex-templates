@@ -1,7 +1,6 @@
 # SPSA Invoices
 
-Copy `template.tex` to `YYYYMMDD-<serial>-<slug>.tex` and change the content to
-your liking.
+Copy `template.tex` and change the content to your liking.
 
 For compiling, you can use a tool like [rubber](https://github.com/petrhosek/rubber)...
 
