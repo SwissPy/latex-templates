@@ -1,0 +1,22 @@
+% Imports
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenx}
+
+% Font
+\usepackage[sfdefault,light]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage{mathastext}
+
+% Graphics
+\usepackage{graphicx}
+
+% Layout
+\usepackage{parskip}
+
+% Signatures
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    \\[1\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{#2}}
+  \end{tabular}
+}
