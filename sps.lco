@@ -24,7 +24,7 @@
 	-\usekomavar{invoicenr}}
 \setkomavar{date}{\displaydate{invoicedate}}
 \setkomavar{frombank}{Postfinance, 8000 Zürich}
-\setkomavar{fromiban}{IBAN CH12 3456 7890 1234 5678 9}
+\setkomavar{fromiban}{IBAN CH79 0900 0000 8984 1185 1}
 \setkomavar{bankseparator}{\quad\textbar\quad}
 
 % Font
